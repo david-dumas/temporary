@@ -1,0 +1,97 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio David Dumas</title>
+</head>
+
+{% endblock %}
+
+{% block content %} 
+
+<section id="contact">
+
+    <h1>Contact</h1>
+
+    <p>Bent u onder de indruk van het werk dat op dit portfolio vertoond staat? <br>Dan is er de mogelijkheid om contact op te nemen met mij door middel van het contact forumulier. Ik hoor graag van u! 
+    </p>
+
+    <section id="mailknop">
+    <p><a href="mailto:daviddumas2000@gmail.com" target="blank">Klik hier om een E-mail te sturen!</a></p>
+    </section>
+    <p>Telefoon: +310634635722</p>
+    </div>
+
+
+        <div class="container contact">
+            <div class="row contact-fields">
+                <div class="col-md-6 col-md-offset-3">
+        {% if success %}
+          <div class="alert alert-success">Uw bericht is verstuurd!</div>
+        {% else %}
+            {% for message in form.firstName.errors %}
+                <div class="flash alert alert-danger">{{ message }}</div>
+            {% endfor %}
+
+            {% for message in form.lastName.errors %}
+              <div class="flash alert alert-danger">{{ message }}</div>
+            {% endfor %}
+            
+            {% for message in form.email.errors %}
+              <div class="flash alert alert-danger">{{ message }}</div>
+            {% endfor %}
+            
+            {% for message in form.subject.errors %}
+              <div class="flash alert alert-danger">{{ message }}</div>
+            {% endfor %}
+            
+            {% for message in form.message.errors %}
+              <div class="flash alert alert-danger">{{ message }}</div>
+            {% endfor %}
+        <form action="{{ url_for('contact') }}"	method="post" name="contact" role="form">
+            {{form.hidden_tag()}}
+            <div class="form-inline row">
+            <div class="form-group col-sm-6">
+            {{ form.firstName(class="form-control", placeholder="Voornaam", **{'data-validation':'required'}) }}
+            </div>
+            <br>
+            <div class="form-group col-sm-6">
+            {{ form.lastName(class="form-control", placeholder="Achternaam", **{'data-validation':'required'}) }}
+            </div>
+            </div>
+            <br />
+            <div class="from-group">
+            <div class="input-group">
+              <div class="input-group-addon"></div>
+            {{ form.email(class="form-control", placeholder="Voer E-mail in:", **{'data-validation':'email'}) }}
+            </div>
+            </div>
+            <br />
+            <div class="form-group">
+            {{ form.subject(class="form-control", placeholder="Onderwerp", **{'data-validation':'required'}) }}
+            </div>
+            <br>
+            <div class="form-group">
+            {{ form.message(class="form-control", placeholder="Wat is uw bericht?", **{'data-validation':'required'}) }}
+            </div>
+            <div class="form-inline row">
+                <div class="form-group col-sm-6 col-sm-offset-6">
+            {{ form.submit(class="btn btn-default btn-block") }}
+                </div>
+            </div>
+        </form>
+                </div><!-- ./col-md-6 -->
+            </div><!-- ./ row -->
+        {% endif %}
+        </div><!-- ./ contact -->
+
+        <br>
+        <br>
+        <br>
+
+  </section>
+{% endblock %}

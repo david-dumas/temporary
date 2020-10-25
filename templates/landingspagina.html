@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='landingspagina.css') }}">
+    
+    <title>Portfolio David Dumas</title>
+</head>
+
+{% endblock %}
+
+{% block content %}
+
+<section id="main">
+    <div class="container">
+
+        <h1>Welkom.</h1>
+</section>
+
+<section id="ondertekst">
+        <div class="tekst1">
+            <p>Welkom op de portfoliowebsite van David Dumas. </p>
+         </div>
+</section>
+
+<section id="boxjes">
+        <div class="box1">
+            <p>Klik hier om een korte beschrijving te lezen over mij en de dingen waar ik van houd.</p>
+            <a href="/About" class="button">About</a>
+        </div>
+
+        <div class="box2">
+            <p>Klik hier om mijn Curriculum Vitae te bekijken, waar vermeld staat waar ik ben geschoold en waar ik werkervaring heb opgedaan.
+            </p>
+            <a href="/CV" class="button">CV</a>
+        </div>
+
+        <div class="box3">
+            <p>Klik hier om een overzicht te bekijken van alle projecten waar ik de afgelopen jaren aan heb gewerkt op de Hogeschool Utrecht.</p>
+            <a href="/productoverzicht" class="button">Product Overzicht</a>
+        </div>
+
+</section>
+
+    <br>
+
+    <div class="container">
+    <section id="main">
+    </section>
+
+{% endblock %}

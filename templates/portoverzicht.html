@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio David Dumas</title>
+</head>
+
+{% endblock %}
+
+{% block content %}
+
+<section id="titeloverzicht">
+    <div class="container">
+        <h1>Portfolio Website</h1>
+
+    </section>
+
+    <section id="mainpp1">
+
+        <h4>Project: Portfolio Wesbite (07-08-2020)</h4>
+
+        <p><img src="{{ url_for('static',filename='/Afbeeldingen/screenportfolio.jpg') }}" width="700"></p>
+
+        <h5>Inleiding:</h5>
+
+            <p>In Semester 1 (jaar 1) van Open-ICT werd de opdracht gegeven om een portfoliowebsite te maken waar de student al zijn/haar vaardigheden kon vertonen. Deze website moest bestaan uit meerder interactieve pagina's met een database. Ik heb gekozen om mijn website kalm en zakelijk te houden, omdat ik professionaliteit uit wil stralen. Hierboven het resultaat van de website. </p>
+
+
+        <br>
+        <br>
+        <br>
+
+        <a href="/productoverzicht" class="button"> Terug</a>
+    </section>
+
+<br>
+<br>
+<br>
+<br>
+
+    </section>
+
+{% endblock %}

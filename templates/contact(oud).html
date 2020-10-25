@@ -1,0 +1,75 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio David Dumas</title>
+</head>
+
+{% endblock %}
+
+{% block content %}
+
+<section id="contacttitel">
+    <div class="container">
+        <h1>Contact</h1>
+
+    </section>
+
+    <section id="contact">
+        <p>Bent u onder de indruk van het werk dat op dit portfolio vertoond staat? <br>Dan is er de mogelijkheid om contact op te nemen met mij door middel van het contact forumulier. Ik hoor graag van u! 
+        </p>
+
+        <section id="mailknop">
+        <p><a href="mailto:daviddumas2000@gmail.com" target="blank">Klik hier om een E-mail te sturen!</a></p>
+        </section>
+        <p>Telefoon: +310634635722</p>
+        </div>
+
+    <section id="mail">
+        <div class="container">
+            
+        </div>
+    </section>
+
+    
+    <form action="/form" method="POST">
+
+        <div class="form-group">
+        <label>Naam:</label>
+        <br>
+        <input type="text" name="naam">
+        </div>
+                    
+        <br>
+
+        <div class="form-group">
+        <label>Achternaam:</label>
+        <br>
+        <input type="text" name="achternaam">
+        </div>
+
+        <br>
+
+         <div class="form-group">
+        <label>Email:</label>
+        <br>
+        <input type="email" name="email">
+        </div>
+
+        <br>
+            
+         <div class="form-group">
+        <label>Bericht:</label> 
+        <br>                   
+        <textarea name="message"></textarea>
+        </div>
+            
+         <input class="button" type="submit" name="submit" value="Verzenden">
+
+     </section>
+
+{% endblock %}

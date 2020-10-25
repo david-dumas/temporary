@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio David Dumas</title>
+</head>
+
+{% endblock %}
+
+{% block content %}
+
+<section id="projecten">
+
+<body>
+   <h1>Projecten Database</h1>
+   <a href="{{url_for('nieuwProject')}}">
+       <button>Creëer Project</button>
+   </a>
+   <ol>
+       {% for project in projecten %}
+       <li> {{project.titel}} op: {{project.datum}} </li>
+       <a href="{{url_for('editProject', project_id = project.id )}}">
+           Edit
+       </a>
+       <a href="{{url_for('deleteProject', project_id = project.id )}}" style="margin-left: 10px;">
+           Verwijder
+       </a>
+       <img src="Afbeeldingen/uploads/{{project.afbeeldingUrl}}"></img>
+       <br> <br>
+       {% endfor %}
+   </ol>
+</body>
+
+</section>
+
+{% endblock %}

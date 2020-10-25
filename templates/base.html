@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='index.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% block head %} 
+
+
+{% endblock %}
+
+<body>
+
+    <header id="main-header">
+        <div class="container">
+        <h1>Portfolio David Dumas</h1>
+    
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="/">Home</a><li>
+                <li><a href="/About">About</a><li>
+                <li><a href="/CV">CV</a></li>
+                <li><a href="/productoverzicht">Product Overzicht</a><li>
+                <li><a href="/contact">Contact</a><li>
+                <li><a href="/login">Login</a><li></li>
+                
+            </ul>
+         </div>
+    </nav>
+{% block content %}
+
+
+{% endblock %}
+
+    <footer id="main-footer">
+            <p> Copyright &copy; 2020, Mijn Portfolio
+             <a href="https://www.facebook.com/profile.php?id=100014855326608" class="fa fa-facebook"></a>
+             <a href="https://www.instagram.com/davidddumas/" class="fa fa-instagram"></a>
+             <a href="https://www.linkedin.com/in/david-dumas-8a672a1b7" class="fa fa-linkedin"></a></p>
+    </footer>
+</body>
+</html>

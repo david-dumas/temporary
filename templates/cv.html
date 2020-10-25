@@ -1,0 +1,81 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio David Dumas</title>
+</head>
+
+{% endblock %}
+
+{% block content %}
+
+<section id="cvtitel">
+    <div class="container">
+        <h1>Curriculum Vitae</h1>
+
+</section>
+
+<section id="maincv">
+    <div class="container">
+
+        <h3>Overzicht van vaardigheden</h3>
+        <p1>
+            <li>Ik spreek Nederlands en Engels vloeiend, en ik kan Duits redelijk spreken</li>
+            <br>
+            <li>Ik ben handig met computers</li>
+            <br>
+            <li>Ik kan goed omgaan met mensen</li>
+            <br>
+            <li>In het bezit van rijbewijs B</li>
+            <br>
+            <li>Ik ben kalm van karakter, kan goed tegen kritiek</li>
+        
+            </p1>
+
+            <h3>Opleidingsgegevens</h3>
+            <p2>
+                <li>2012-2017: VWO (Lek en Linge, Culemborg)</li>
+                <br>
+                <li>2018-2018: Havo, diploma behaald in 2018 (Lek en Linge, Culemborg)</li>
+                Vakken:
+                <p3>Duits, Engels, Nederlands, informatica, </p3>
+                <br>
+                <p3>maatschappijleer, wiskunde A, economie en geschiedenis.</p3>
+                <br>
+                <li>2018-2019: Bedrijfskunde aan de Hogeschool Utrecht (geen Propedeuse behaald)</li>
+                <br>
+                <li>2020 tot heden: Open ICT aan de Hogeschool Utrecht</li>
+                
+            </p2>
+            <h3>Werkervaring</h3>
+                <p3>
+                <li>2017-2018: Lidl in Culemborg, gewerkt als hulpploegmedewerker.</li>
+                <br>
+                <li>2018-Heden: Oprichter en eigenaar van het bedrijf Fashionstate, webshop ivm kleding retail</li>
+                <br>
+                <li>01-2020 tot 04-2020: Ober bij restaurant Den Draeck</li>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </p3>
+    </div>
+</section>
+
+<section id="Fotocv">
+    <div class="container">
+    <div class="Profielfoto">
+
+    <p>Lek en Linge: <img src="{{ url_for('static',filename='/Afbeeldingen/lekenlinge.jpg') }}" width="450"></p>
+    <p>Den Draeck:<img src="{{ url_for('static',filename='/Afbeeldingen/dendraeck.jpg') }}" width="450"></p>
+
+
+    </div>
+    </div>
+
+{% endblock %}

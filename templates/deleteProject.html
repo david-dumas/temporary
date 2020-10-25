@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio David Dumas</title>
+</head>
+
+{% endblock %}
+
+{% block content %}
+
+<form action="{{ url_for('editProject', project.id = project.id)}}" method="post">
+    <div class="form-group">
+        <label for="titel">Titel:</label>
+        <input type="text" class="form-control" name="titel" value="{{project.titel }}">
+        <button type="submit"> Opslaan</button>
+        <a href="{{url_for('showProjects')}}">
+            <button>Annuleren</button>
+        </a>
+    </div>
+ </form>
+
+ {% endblock%}

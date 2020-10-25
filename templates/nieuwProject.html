@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio David Dumas</title>
+</head>
+
+{% endblock %}
+
+{% block content %}
+
+<section id="nieuwproject">
+    <h1>Voeg Project Toe:</h1>
+    <form action="/createProject/" method="POST">
+    <div class="form-group">
+        <label for="titel">Titel:</label>
+        <input type="text" maxlength="100" name="titel" placeholder="Titel van Project">
+
+        <label for="datum">Datum:</label>
+        <input maxlength="100" name="datum" placeholder="Datum van Project">
+
+        <label for="afbeeldingUrl">Afbeelding:</label>
+        <input maxlength="100" name="afbeeldingUrl" placeholder="Afbeelding Project">
+
+        <label for="beschrijving">Beschrijving:</label>
+        <input maxlength="250" name="beschrijving" placeholder="Beschrijving Project">
+
+        <button type="submit">Creëer</button>
+    </div>
+</form>
+
+</section>
+
+<br>
+<br>
+
+{% endblock %}

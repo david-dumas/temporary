@@ -1,0 +1,71 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='index.css') }}">
+    
+    <title>Portfolio David Dumas</title>
+</head>
+
+{% endblock %}
+
+{% block content %}
+
+</section>
+
+<section id="showcase-2">
+    <div class="container">
+        <h1>Persoonlijke introductie</h1>
+    </div>
+    </section>
+
+<section id="main">
+    <div class="container">
+        <h3>Even voorstellen</h3>
+                <p>Mijn naam is David Dumas. 
+                    Ik ben 20 jaar en ik kom uit Culemborg. 
+                    Momenteel woon ik op kamers in Overvecht, waar ik toevallig ook geboren ben, met mijn twee beste vrienden Jaron en Gijs. 
+                    Mijn hobbies zijn fitness, martial arts, naar festivals gaan en films kijken. 
+                    Ik ga ook graag op vakantie en heb een passie voor hondensport. 
+                    Ik heb een eigen bedrijfje waar ik soms veel tijd aan kwijt ben, maar waar ik veel van houd.  
+                    Door dit bedrijfje heb ik altijd wel interesse in een business plan. 
+                    Als je goede ideeën hebt kan je altijd bij mij terecht.
+                </p>
+
+        <h3>Waarom heb ik Open-ICT gekozen als studie?</h3>
+                <p1>
+                    In 2018 begon ik aan bedrijfskunde bij de Hogeschool Utrecht. Al snel merkte ik dat ik het niet fijn vond om telkens uren naar colleges te luisteren. Ik had bedrijskunde gekozen om een bedrijf in de praktijk te kunnen starten. De studie bleek uiteindelijk meer te draaien om bedrijfsphilosophie dan om het toepassen van praktijkskennis. Nadat ik in mijn tussenjaar mijn eigen bedrijfje "Fashionstate" had gestart, zocht ik weer een nieuwe invalshoek op de zakenwereld. Ik merkte dat ik bij mijn webshop veel IT-kennis tekort kwam. Ik had altijd al interesse in computers, maar ik achtte mijzelf niet intelligent genoeg om achter deze passie aan te gaan. Toen kwam ik Open-ICT tegen. Een studie waarbij je wordt geleerd om te leren, en waarbij je die kennis gelijk kan toepassen in relevante opdrachten. Het was een perfecte match met wat ik zocht.
+                </p1>
+
+        <br>
+        <br>
+        <p1><img src="{{ url_for('static',filename='/Afbeeldingen/openict.jpg') }}" width="300"></p1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+
+    <section id="Foto">
+        <div class="container">
+        <div class="Profielfoto">
+
+        <p><img src="{{ url_for('static',filename='/Afbeeldingen/Profielfoto1.jpg') }}" width="410"></p>
+    
+        </div>
+        </div>
+
+</section>
+
+    <div class="container">
+    <section id="main">
+    </section>
+
+{% endblock %}
